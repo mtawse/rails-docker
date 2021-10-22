@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PatternsController < ApplicationController
-  before_action :set_pattern, only: [:show, :update, :destroy]
+  before_action :set_pattern, only: %i[show update destroy]
 
   # GET /patterns
   def index
@@ -39,13 +41,14 @@ class PatternsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pattern
-      @pattern = Pattern.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def pattern_params
-      params.require(:pattern).permit(:name, :description, content: [:note, :accent, :slide, :up, :down, :rest] )
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pattern
+    @pattern = Pattern.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def pattern_params
+    params.require(:pattern).permit(:name, :description, content: %i[note accent slide up down rest])
+  end
 end

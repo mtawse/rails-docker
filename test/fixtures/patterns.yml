@@ -2,8 +2,21 @@
 
 one:
   name: MyString
-  content: 
+  content: [
+    {
+      "note": "c"
+    }
+  ]
 
 two:
   name: MyString
-  content: 
+  content: [
+    {
+      "note": "a#",
+      "accent": true,
+      "slide": true
+    },
+    {
+      "note": "b"
+    }
+  ]
