@@ -1,0 +1,33 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "minItems": 1,
+    "items": {
+        "type": "object",
+        "properties": {
+            "note": {
+                "type": "string"
+            },
+            "accent": {
+                "type": "boolean"
+            },
+            "slide": {
+                "type": "boolean"
+            },
+            "up": {
+                "type": "boolean"
+            },
+            "down": {
+                "type": "boolean"
+            },
+            "rest": {
+                "type": "boolean"
+            }
+        },
+        "required": [
+            "note"
+        ],
+        "additionalProperties": false
+    },
+    "additionalProperties": false
+}
